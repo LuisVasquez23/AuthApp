@@ -139,3 +139,4 @@ C:\Users\luis\Documents\Learning\netCore\AuthApp\AuthApp.Api\bin\Debug\net8.0\Mi
 C:\Users\luis\Documents\Learning\netCore\AuthApp\AuthApp.Api\bin\Debug\net8.0\Microsoft.IdentityModel.Protocols.OpenIdConnect.dll
 C:\Users\luis\Documents\Learning\netCore\AuthApp\AuthApp.Api\bin\Debug\net8.0\Microsoft.IdentityModel.Tokens.dll
 C:\Users\luis\Documents\Learning\netCore\AuthApp\AuthApp.Api\bin\Debug\net8.0\System.IdentityModel.Tokens.Jwt.dll
+C:\Users\luis\Documents\Learning\netCore\AuthApp\AuthApp.Api\obj\Debug\net8.0\AuthApp.Api.sourcelink.json

@@ -32,7 +32,7 @@ namespace AuthApp.Api.Controllers
         }
 
 
-        [HttpPost]
+        [HttpPost("Register")]
         public async Task<IActionResult> SignUp(RegisterDTO registerDTO)
         {
             // check user has been registered already
@@ -85,7 +85,7 @@ namespace AuthApp.Api.Controllers
             return StatusCode(StatusCodes.Status400BadRequest);
         }
 
-        [HttpPost("signin")]
+        [HttpPost("Login")]
         public async Task<IActionResult> SignIn(LoginDTO loginDTO)
         {
             // Check Password is correct
@@ -122,6 +122,11 @@ namespace AuthApp.Api.Controllers
                 return NotFound();
             }
 
+            if (user.EmailConfirmed)
+            {
+                return StatusCode(StatusCodes.Status201Created, new { message = "You already confirm your account" });
+            }
+
             // check token and confirm
             var result = await _userManager.ConfirmEmailAsync(user, token);
             // If email confirmation process has been succeeded, generate a new token and pass it to the result
@@ -132,6 +137,85 @@ namespace AuthApp.Api.Controllers
             }
             // otherwise, return Forbidden status as a result
             return StatusCode(StatusCodes.Status403Forbidden);
+        }
+
+        [HttpGet("ResendConfirmationLink")]
+        public async Task<IActionResult> ResendConfirmationLink(string email)
+        {
+            // Check email exists in the database
+            var user = await _userManager.FindByEmailAsync(email);
+            //If there is a user, execute the if block
+            if (user is not null)
+            {
+
+                if (user.EmailConfirmed)
+                {
+                    return StatusCode(StatusCodes.Status201Created, new { message = "You already confirm your account" });
+                }
+
+                // Generate token
+                var token = HttpUtility.UrlEncode(await _userManager.GenerateEmailConfirmationTokenAsync(user));
+
+                // Generate Confirmation link
+                var confirmationLink = new StringBuilder($"https://localhost:7290/api/Auth/confirmEmail?token={token}&userId={user.Id}");
+
+                // Send Email 
+                var status = _mailService.Send(user.Email, "Email Confirmation", confirmationLink.ToString(), false);
+                // If the status was true, the email has been sent
+                if (status)
+                {
+                    return StatusCode(StatusCodes.Status201Created, new { message = "Confirmation link has been sent to your email address" });
+                }
+
+            }
+            // Otherwise, return a BadRequest as a result
+            return StatusCode(StatusCodes.Status400BadRequest);
+        }
+
+        [HttpGet("ResetPasswordLink")]
+        public async Task<IActionResult> ResetPasswordLink(string email)
+        {
+            // check user exist
+            var user = await _userManager.FindByEmailAsync(email);
+
+            // If there is a user, execute the if block
+            if (user is not null || user.EmailConfirmed != false)
+            {
+                // Generate token
+                var token = HttpUtility.UrlEncode(await _userManager.GeneratePasswordResetTokenAsync(user));
+
+                // Generate Reset Password Link
+                var passwordResetLink = new StringBuilder($"https://localhost:7290/api/Auth/ResetPassword?token={token}&userId={user.Id}");
+                // Send Email 
+                var status = _mailService.Send(user.Email, "Reset Password", passwordResetLink.ToString(), false);
+                // If the status was true, the email has been sent
+                if (status)
+                {
+                    return StatusCode(StatusCodes.Status201Created, new { message = "Reset password link has been sent to your email address" });
+                }
+            }
+            // Otherwise, return a BadRequest as a result
+            return StatusCode(StatusCodes.Status400BadRequest);
+        }
+
+        [HttpPost("ResetPassword")]
+        public async Task<IActionResult> ResetPassword(string token, string userId, ResetPasswordDTO passwordDTO)
+        {
+            // check exist user
+            var user = await _userManager.FindByIdAsync(userId);
+            // If there is a user, execute the if block
+            if (user is not null)
+            {
+                // Reset password based on the token that is comming through the url
+                var result = await _userManager.ResetPasswordAsync(user, token, passwordDTO.Password);
+                // If the result is succeeded then exucute the if block
+                if (result.Succeeded)
+                {
+                    return StatusCode(StatusCodes.Status201Created, new { message = "Your password has been updated." });
+                }
+            }
+            // Otherwise, return a BadRequest as a result
+            return StatusCode(StatusCodes.Status400BadRequest);
         }
     }
 }

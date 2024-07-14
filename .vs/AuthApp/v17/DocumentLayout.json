@@ -7,6 +7,10 @@
       "RelativeMoniker": "D:0:0:{D201FCC0-DAA4-435B-BA6A-B3EEA820FE59}|AuthApp.Api\\AuthApp.Api.csproj|solutionrelative:authapp.api\\controllers\\authcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
+      "AbsoluteMoniker": "D:0:0:{D201FCC0-DAA4-435B-BA6A-B3EEA820FE59}|AuthApp.Api\\AuthApp.Api.csproj|c:\\users\\luis\\documents\\learning\\netcore\\authapp\\authapp.api\\dtos\\resetpassworddto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{D201FCC0-DAA4-435B-BA6A-B3EEA820FE59}|AuthApp.Api\\AuthApp.Api.csproj|solutionrelative:authapp.api\\dtos\\resetpassworddto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{D201FCC0-DAA4-435B-BA6A-B3EEA820FE59}|AuthApp.Api\\AuthApp.Api.csproj|c:\\users\\luis\\documents\\learning\\netcore\\authapp\\authapp.api\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
       "RelativeMoniker": "D:0:0:{D201FCC0-DAA4-435B-BA6A-B3EEA820FE59}|AuthApp.Api\\AuthApp.Api.csproj|solutionrelative:authapp.api\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
     },
@@ -26,7 +30,7 @@
       "DocumentGroups": [
         {
           "DockedHeight": 200,
-          "SelectedChildIndex": 4,
+          "SelectedChildIndex": 5,
           "Children": [
             {
               "$type": "Bookmark",
@@ -34,7 +38,20 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 1,
+              "Title": "ResetPasswordDTO.cs",
+              "DocumentMoniker": "C:\\Users\\luis\\Documents\\Learning\\netCore\\AuthApp\\AuthApp.Api\\DTOs\\ResetPasswordDTO.cs",
+              "RelativeDocumentMoniker": "AuthApp.Api\\DTOs\\ResetPasswordDTO.cs",
+              "ToolTip": "C:\\Users\\luis\\Documents\\Learning\\netCore\\AuthApp\\AuthApp.Api\\DTOs\\ResetPasswordDTO.cs",
+              "RelativeToolTip": "AuthApp.Api\\DTOs\\ResetPasswordDTO.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAgAAAAzAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-07-14T20:04:31.439Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
               "Title": "launchSettings.json",
               "DocumentMoniker": "C:\\Users\\luis\\Documents\\Learning\\netCore\\AuthApp\\AuthApp.Api\\Properties\\launchSettings.json",
               "RelativeDocumentMoniker": "AuthApp.Api\\Properties\\launchSettings.json",
@@ -42,12 +59,11 @@
               "RelativeToolTip": "AuthApp.Api\\Properties\\launchSettings.json",
               "ViewState": "AQIAAAYAAAAAAAAAAAAkwBoAAABFAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
-              "WhenOpened": "2024-07-14T14:53:30.313Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-07-14T14:53:30.313Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 2,
               "Title": "appsettings.json",
               "DocumentMoniker": "C:\\Users\\luis\\Documents\\Learning\\netCore\\AuthApp\\AuthApp.Api\\appsettings.json",
               "RelativeDocumentMoniker": "AuthApp.Api\\appsettings.json",
@@ -55,12 +71,11 @@
               "RelativeToolTip": "AuthApp.Api\\appsettings.json",
               "ViewState": "AQIAAAAAAAAAAAAAAAAAABAAAAAxAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
-              "WhenOpened": "2024-07-14T14:45:16.08Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-07-14T14:45:16.08Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 3,
               "Title": "MailService.cs",
               "DocumentMoniker": "C:\\Users\\luis\\Documents\\Learning\\netCore\\AuthApp\\AuthApp.Api\\Services\\Mail\\MailService.cs",
               "RelativeDocumentMoniker": "AuthApp.Api\\Services\\Mail\\MailService.cs",
@@ -68,8 +83,7 @@
               "RelativeToolTip": "AuthApp.Api\\Services\\Mail\\MailService.cs",
               "ViewState": "AQIAAAAAAAAAAAAAAAAAABkAAAA0AAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-07-14T14:35:55.725Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-07-14T14:35:55.725Z"
             },
             {
               "$type": "Document",
@@ -79,7 +93,7 @@
               "RelativeDocumentMoniker": "AuthApp.Api\\Controllers\\AuthController.cs",
               "ToolTip": "C:\\Users\\luis\\Documents\\Learning\\netCore\\AuthApp\\AuthApp.Api\\Controllers\\AuthController.cs",
               "RelativeToolTip": "AuthApp.Api\\Controllers\\AuthController.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAoAAAABAAAA",
+              "ViewState": "AQIAACIAAAAAAAAAAAAQwH8AAAANAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-07-14T14:22:26.113Z",
               "EditorCaption": ""
