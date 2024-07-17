@@ -1,5 +1,3 @@
-I'd be glad to create a comprehensive README for your .NET Core 8 project with JWT login, registration, and email confirmation:
-
 # Secure .NET Core 8 API with JWT Authentication and Email Confirmation
 
 This project provides a secure API built with .NET Core 8, implementing user authentication using JSON Web Tokens (JWT) and email confirmation for enhanced security and user experience.
